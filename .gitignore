@@ -221,3 +221,35 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project-specific rules (ML UIT-VSFC)
+# Ignore large binary model checkpoints and generated numpy feature caches
+checkpoints/
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# Ignore LaTeX build artifacts while keeping source (.tex), figures (.png), and final PDF
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.synctex.gz
+*.toc
+
+# Ensure required directories and deliverables are never ignored
+!features/.gitkeep
+!reports/
+!reports/report.tex
+!reports/*.pdf
+!reports/figures/
+!reports/figures/*.png
+!notebooks/
+!notebooks/*.ipynb
+!modules/
+!modules/*.py
